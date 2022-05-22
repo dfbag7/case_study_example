@@ -82,9 +82,10 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('search_profile_fields');
+        Schema::dropIfExists('search_profile_values');
         Schema::dropIfExists('search_profiles');
         Schema::dropIfExists('property_field_values');
         Schema::dropIfExists('property_fields');
+        Schema::dropIfExists('properties');
     }
 };

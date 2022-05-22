@@ -15,10 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
-
 Route::controller(PropertyMatchController::class)->group(function() {
-    Route::get('/match/{propertyId}', 'match');
+    Route::get('/match/{propertyId}', 'match')->name('api.match');
 });
